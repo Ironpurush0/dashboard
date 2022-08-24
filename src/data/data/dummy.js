@@ -471,11 +471,11 @@ export const employeesGrid = [
 
 export const links = [
   {
-    title: 'Dashboard',
+    // title: 'Dashboard',
     links: [
       {
-        name: 'ecommerce',
-        icon: <FiShoppingBag />,
+        name: 'Dashboard',
+        // icon: <FiShoppingBag />,
       },
     ],
   },
@@ -488,36 +488,36 @@ export const links = [
         icon: <AiOutlineShoppingCart />,
       },
       {
-        name: 'employees',
+        name: 'products',
         icon: <IoMdContacts />,
       },
       {
-        name: 'customers',
+        name: 'users',
         icon: <RiContactsLine />,
       },
     ],
   },
-  {
-    title: 'Apps',
-    links: [
-      {
-        name: 'calendar',
-        icon: <AiOutlineCalendar />,
-      },
-      {
-        name: 'kanban',
-        icon: <BsKanban />,
-      },
-      {
-        name: 'editor',
-        icon: <FiEdit />,
-      },
-      {
-        name: 'color-picker',
-        icon: <BiColorFill />,
-      },
-    ],
-  },
+  // {
+  //   title: 'Apps',
+  //   links: [
+  //     {
+  //       name: 'calendar',
+  //       icon: <AiOutlineCalendar />,
+  //     },
+  //     {
+  //       name: 'kanban',
+  //       icon: <BsKanban />,
+  //     },
+  //     {
+  //       name: 'editor',
+  //       icon: <FiEdit />,
+  //     },
+  //     {
+  //       name: 'color-picker',
+  //       icon: <BiColorFill />,
+  //     },
+  //   ],
+  // },
   {
     title: 'Charts',
     links: [
@@ -526,34 +526,33 @@ export const links = [
         icon: <AiOutlineStock />,
       },
       {
-        name: 'area',
-        icon: <AiOutlineAreaChart />,
-      },
-
-      {
         name: 'bar',
         icon: <AiOutlineBarChart />,
       },
-      {
-        name: 'pie',
-        icon: <FiPieChart />,
-      },
-      {
-        name: 'financial',
-        icon: <RiStockLine />,
-      },
-      {
-        name: 'color-mapping',
-        icon: <BsBarChart />,
-      },
-      {
-        name: 'pyramid',
-        icon: <GiLouvrePyramid />,
-      },
-      {
-        name: 'stacked',
-        icon: <AiOutlineBarChart />,
-      },
+      // {
+      //   name: 'area',
+      //   icon: <AiOutlineAreaChart />,
+      // },
+      // {
+      //   name: 'pie',
+      //   icon: <FiPieChart />,
+      // },
+      // {
+      //   name: 'financial',
+      //   icon: <RiStockLine />,
+      // },
+      // {
+      //   name: 'color-mapping',
+      //   icon: <BsBarChart />,
+      // },
+      // {
+      //   name: 'pyramid',
+      //   icon: <GiLouvrePyramid />,
+      // },
+      // {
+      //   name: 'stacked',
+      //   icon: <AiOutlineBarChart />,
+      // },
     ],
   },
 ];

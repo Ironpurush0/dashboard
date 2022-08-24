@@ -1,12 +1,31 @@
 import React, {useEffect} from 'react'
 
+import './App.css'
+
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 import {FiSettings} from 'react-icons/fi'
 
 import {TooltipComponent} from '@syncfusion/ej2-react-popups'
 
+import Users from './pages/Users'
+import Orders from './pages/Orders'
+import Products from './pages/Products'
+import BarChart from './pages/charts/BarChart'
+import LineChart from './pages/charts/LineChart'
+
+import NavBar from './components/NavBar'
+import SideBar from './components/SideBar'
+import Footer from './components/Footer'
+
+import {useStateContext} from './context/ContextProvider'
+
+
 const App = () => {
+  // const activeMenu = true
+
+  const {activeMenu} = useStateContext()
+
   return (
     <div>
       <Router>
@@ -16,8 +35,39 @@ const App = () => {
               <button type='button' style={{background: 'blue', borderRadius: '50%'}} className='text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white'>
                 <FiSettings />
               </button>
-            </TooltipComponent>
+            </TooltipComponent> 
           </div>
+          {
+            activeMenu ? 
+            <div className='w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white'>
+              <SideBar />
+            </div> :
+            <div className='w-0'>
+              <SideBar />
+            </div> 
+          }
+          <div className={`dark:bg-main-bg bg-main-bg min-h-screen w-full ${activeMenu ? 'md:ml-72' : 'flex-2'}` }>
+            <div className='fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full'>
+              <NavBar />
+            </div>
+          </div>
+
+          <div>
+            <Routes>
+              {/* Dashboard */}
+              <Route path="/" />
+
+              {/* Pages */}
+              <Route path="/customers" element={<Users />} />
+              <Route path="/orders" element={<Orders />} />
+              <Route path="/products" element={<Products />} />
+
+              {/* charts */}
+              <Route path="/linechart" element={<LineChart />} />
+              <Route path="/barchart" element={<BarChart />} />
+            </Routes>
+          </div>
+
         </div>
       </Router>
     </div>
