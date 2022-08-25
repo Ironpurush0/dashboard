@@ -19,6 +19,7 @@ import SideBar from './components/SideBar'
 import Footer from './components/Footer'
 
 import {useStateContext} from './context/ContextProvider'
+import Home from './pages/Home'
 
 
 const App = () => {
@@ -50,24 +51,24 @@ const App = () => {
             <div className='fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full'>
               <NavBar />
             </div>
-          </div>
+          
 
           <div>
             <Routes>
               {/* Dashboard */}
-              <Route path="/" />
+              <Route exact path="/" element={<Home />} />
 
               {/* Pages */}
-              <Route path="/customers" element={<Users />} />
-              <Route path="/orders" element={<Orders />} />
-              <Route path="/products" element={<Products />} />
+              <Route exact path="/users" element={<Users />} />
+              <Route exact path="/orders" element={<Orders />} />
+              <Route exact path="/products" element={<Products />} />
 
               {/* charts */}
-              <Route path="/linechart" element={<LineChart />} />
-              <Route path="/barchart" element={<BarChart />} />
+              <Route exact path="/linechart" element={<LineChart />} />
+              <Route exact path="/barchart" element={<BarChart />} />
             </Routes>
           </div>
-
+          </div>
         </div>
       </Router>
     </div>

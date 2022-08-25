@@ -470,15 +470,15 @@ export const employeesGrid = [
 ];
 
 export const links = [
-  {
-    // title: 'Dashboard',
-    links: [
-      {
-        name: 'Dashboard',
-        // icon: <FiShoppingBag />,
-      },
-    ],
-  },
+  // {
+  //   // title: 'Dashboard',
+  //   links: [
+  //     {
+  //       name: 'Dashboard',
+  //       // icon: <FiShoppingBag />,
+  //     },
+  //   ],
+  // },
 
   {
     title: 'Pages',

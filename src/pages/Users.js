@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-const Users = () => {
+import useData from '../hook/useData'
+
+const Orders = () => {
+
+  const url = 'https://assessment.api.vweb.app/users'
+
+  const {data, loading} = useData(url)
+  
+  useEffect(() => {
+    console.log(data)
+  }, [])
+  
   return (
-    <div>Users</div>
+    <div>Orders</div>
   )
 }
 
-export default Users
+export default Orders

@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-const Products = () => {
+import useData from '../hook/useData'
+
+const Orders = () => {
+
+  const url = 'https://assessment.api.vweb.app/products'
+
+  const {data, loading} = useData(url)
+  
+  useEffect(() => {
+    console.log(data)
+  }, [])
+  
   return (
-    <div>Products</div>
+    <div>Orders</div>
   )
 }
 
-export default Products
+export default Orders

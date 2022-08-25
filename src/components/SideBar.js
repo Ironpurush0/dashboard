@@ -22,7 +22,7 @@ const SideBar = () => {
             activeMenu && (
                 <>
                 <div className='flex justify-between items-center'>
-                    <Link to="/" onClick={() => {setActiveMenu(false)}} className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight">
+                    <Link to="/" className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight">
                         <span>Orders</span>
                     </Link>
                     <TooltipComponent position='BottomCenter' content="cancel">
@@ -32,6 +32,11 @@ const SideBar = () => {
                     </TooltipComponent>
                 </div>
                 <div className='mt-10'>
+                <NavLink className={({ isActive }) => isActive ? activeLink : normalLink } to="/" onClick={() => {}}>
+                                        <span className='capitalize'>
+                                            Dashboard
+                                        </span>
+                                    </NavLink>
                     {links.map(item => (
                         <div key={item.title}>
                             <p className='text-gray-400 mt-4 uppercase'>{item.title}</p>
