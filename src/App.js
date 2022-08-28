@@ -12,7 +12,7 @@ import Users from './pages/Users'
 import Orders from './pages/Orders'
 import Products from './pages/Products'
 import BarChart from './pages/charts/BarChart'
-import LineChart from './pages/charts/LineChart'
+import LineChartPage from './pages/charts/LineChartPage'
 
 import NavBar from './components/NavBar'
 import SideBar from './components/SideBar'
@@ -25,7 +25,7 @@ import Home from './pages/Home'
 const App = () => {
   // const activeMenu = true
 
-  const {activeMenu} = useStateContext()
+  const {activeMenu, userData, productData, ordersData} = useStateContext()
 
   return (
     <div>
@@ -59,12 +59,12 @@ const App = () => {
               <Route exact path="/" element={<Home />} />
 
               {/* Pages */}
-              <Route exact path="/users" element={<Users />} />
-              <Route exact path="/orders" element={<Orders />} />
-              <Route exact path="/products" element={<Products />} />
+              <Route exact path="/users" element={<Users data={userData} />} />
+              <Route exact path="/orders" element={<Orders data={ordersData} />} />
+              <Route exact path="/products" element={<Products data={productData} />} />
 
               {/* charts */}
-              <Route exact path="/linechart" element={<LineChart />} />
+              <Route exact path="/linechart" element={<LineChartPage />} />
               <Route exact path="/barchart" element={<BarChart />} />
             </Routes>
           </div>

@@ -2,11 +2,7 @@ import React, { useEffect } from 'react'
 
 import useData from '../hook/useData'
 
-const Orders = () => {
-
-  const url = 'https://assessment.api.vweb.app/users'
-
-  const {data, loading} = useData(url)
+const Orders = ({data}) => {
   
   useEffect(() => {
     console.log(data)

@@ -11,7 +11,6 @@ const useData = (url) => {
             setLoading(true)
             try {
                 const res = await axios.get(url)
-                console.log(res.data)
                 setData(res.data)
                 setLoading(false)
 
