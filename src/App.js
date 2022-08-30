@@ -59,9 +59,9 @@ const App = () => {
               <Route exact path="/" element={<Home />} />
 
               {/* Pages */}
-              <Route exact path="/users" element={<Users data={userData} />} />
-              <Route exact path="/orders" element={<Orders data={ordersData} />} />
-              <Route exact path="/products" element={<Products data={productData} />} />
+              <Route exact path="/users" element={<Users userData={userData} />} />
+              <Route exact path="/orders" element={<Orders ordersData={ordersData} />} />
+              <Route exact path="/products" element={<Products productData={productData} />} />
 
               {/* charts */}
               <Route exact path="/linechart" element={<LineChartPage />} />
